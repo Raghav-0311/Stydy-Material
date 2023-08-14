@@ -48,3 +48,5 @@
     - Node.js provides a server-side runtime environment for executing JavaScript outside the browser.
     - Because it executes JavaScript outside the browser, it does not have access to the Web APIs.
     - Instead, the Node.js runtime environment replaces it with something called C++ bindings and the Thread Pool.
+
+> Ref - FreeCodeCamp article on How JavaScript Works.
