@@ -112,3 +112,63 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
   let lastName = "Kashyap";
   let fullName = firstName.concat(" ", lastName); // fullName = "Raghav Kashyap"
   ```
+
+- ## .includes(substring) -
+  - Checks if the string contains the specified substring.
+  
+  ```js
+  // includes method
+
+  let text = "I am learning JavaScript";
+  let containsJS = text.includes("JavaScript"); // containsJS = true
+  ```
+
+- ## .endsWith(suffix) -
+  - Checks if the string ends with the specified suffix.
+  
+  ```js
+  // endsWith method
+
+  let text = "Hello, Raghav";
+  let endsWith = text.endsWith("Raghav"); // endsWith = true
+  ```
+
+- ## .indexOf(substring, startIndex) -
+  - Returns the index of the first occurrence of the specified substring.
+  
+  ```js
+  // indexOf method
+
+  let text = "Hello, Raghav";
+  let index = text.indexOf("Raghav"); // index = 7
+  ```
+
+- ## .lastIndexOf(substring, startIndex) -
+  - Returns the index of the last occurrence of the specified substring.
+  
+  ```js
+  // lastIndexOf method
+
+  let text = "Hello, Raghav";
+  let index = text.lastIndexOf("a"); // index = 11
+  ```
+
+- ## .length -
+  - Returns the length of the string.
+  
+  ```js
+  // length property
+
+  let text = "Hello";
+  let length = text.length; // length = 5
+  ```
+
+- ## .match(regex) -
+  - Returns an array of matches based on a regular expression.
+  
+  ```js
+  // match method
+
+  let text = "Hello, world!";
+  let matchedArray = text.match(/[A-Za-z]+/g); // matchedArray = ["Hello", "world"]
+  ```
