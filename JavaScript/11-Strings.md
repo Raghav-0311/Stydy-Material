@@ -172,3 +172,164 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
   let text = "Hello, world!";
   let matchedArray = text.match(/[A-Za-z]+/g); // matchedArray = ["Hello", "world"]
   ```
+
+- ## .padEnd(targetLength, padString) -
+  - Pads the end of the string with a specified character to reach a target length.
+  
+  ```js
+  // padEnd method
+
+  let text = "Raghav";
+  let paddedText = text.padEnd(10, "!"); // paddedText = "Raghav!!!!"
+  ```
+
+- ## .padStart(targetLength, padString) -
+  - Pads the start of the string with a specified character to reach a target length.
+  
+  ```js
+  // padStart method
+
+  let text = "Raghav";
+  let paddedText = text.padStart(10, "!"); // paddedText = "!!!!Raghav"
+  ```
+
+- ## .repeat(count) -
+  - Returns a new string with the original string repeated **count** times.
+  
+  ```js
+  // repeat method
+
+  let text = "ABC";
+  let repeatedText = text.repeat(3); // repeatedText = "ABCABCABC"
+  ```
+
+- ## .replace(oldValue, newValue) -
+  - Replace occurrences of **oldValue** with **newValue**.
+  
+  ```js
+  // replace method
+
+  let text = "Hello, world!";
+  let newText = text.replace("world", "Raghav"); // newText = "Hello, Raghav!"
+  ```
+
+- ## .search(regex) -
+  - Searches for a match based on a regular expression and returns the index.
+  
+  ```js
+  // search method
+
+  let text = "We are learning JavaScript!";
+  let index = text.search(/Java(Script)?/); // index = 16
+  ```
+
+- ## .slice(startIndex, endIndex) -
+  - Extracts a portion of the string from **startIndex** to **endIndex**. (i.e. startIndex to till endIndex(not included)).
+  
+  ```js
+  // slice method
+
+  let text = "Hello, Raghav!";
+  let subText = text.slice(7, 13); // subText = "Raghav"
+  ```
+
+- ## .split(separator, limit) -
+  - Splits the string into an array of substrings using the specified separator.
+  
+  ```js
+  // split method
+
+  let fruits = "apple, banana, orange";
+  let fruitArray = fruits.split(", "); // fruitArray = ["apple", "banana", "orange"]
+  ```
+
+- ## .startsWith(prefix) -
+  - Checks if the string starts with the specified prefix.
+  
+  ```js
+  // startsWith method
+
+  let text = "Hello, Raghav!";
+  let startsWith = text.startsWith("Hello"); // startsWith = true
+  ```
+
+- ## .substr(startIndex, length) -
+  - Returns a substring starting from **startIndex** with the specified **length**.
+  
+  ```js
+  // substr method 
+
+  let text = "Hello, Raghav!";
+  let subText = text.substr(7, 6); // subText = "Raghav"
+  ```
+
+- ## .substring(startIndex, endIndex) -
+  - Returns a substring between **startIndex** and **endIndex**.
+  
+  ```js
+  // substring method
+
+  let text = "Hello, Raghav!";
+  let subText = text.substring(7, 13); // subText = "Raghav"
+  ```
+
+- ## .toLocaleLowerCase() -
+  - Converts the string to lowercase using the host's current locale settings.
+  
+  ```js
+  // toLocaleLowerCase method
+
+  let text = "HeLLo, RaGHaV!";
+  let lowerCaseText = text.toLocaleLowerCase(); // lowerCaseText = "hello, raghav!"
+  ```
+
+- ## .toLocaleUpperCase() -
+  - Converts the string to uppercase using the host's current locale settings.
+  
+  ```js
+  // toLocaleUpperCase method
+
+  let text = "HeLLo, RaGHaV!";
+  let upperCaseText = text.toLocaleUpperCase(); // upperCaseText = "HELLO, RAGHAV!"
+  ```
+
+- ## .toLocaleCase() -
+  - Converts the string to lowercase.
+  
+  ```js
+  // toLowerCase method
+
+  let text = "HeLLo, RaGHaV!";
+  let lowerCaseText = text.toLowerCase(); // lowerCaseText = "hello, raghav!"
+  ```
+
+- ## .toUpperCase() -
+  - Converts the string to uppercase.
+  
+  ```js
+  // toUpperCase method
+
+  let text = "HeLLo, RaGHaV!";
+  let upperCaseText = text.toUpperCase(); // upperCaseText = "HELLO, RAGHAV!"
+  ```
+
+- ## .trim() -
+  - Removes whitespace characters from the beginning and end of the string.
+  
+  ```js
+  // trim method
+
+  let paddedText = "     Hello, Raghav!       ";
+  let trimmedText = paddedText.trim(); // trimmedText = "Hello, Raghav!"
+  ```
+
+- ## .valueOf() -
+  - Returns the primitive value of the string object.
+  
+  ```js
+  // valueOf method
+
+  let text = new String("Hello");
+  let primitiveValue = text.valueOf(); // primitiveValue = "Hello"
+  ```
+
