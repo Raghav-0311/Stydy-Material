@@ -333,3 +333,63 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
   let primitiveValue = text.valueOf(); // primitiveValue = "Hello"
   ```
 
+# Basic String Related DSA Problems -
+
+1. ### Write a function to find the length of a given string without using the built-in ``length`` property.
+   
+   ```js
+   function findStringLength(str) {
+    let count = 0;
+    for (let char of str) {
+        count++;
+    }
+    return count;
+   }
+
+   let strLength = findStringLength("hello");
+
+   console.log(`Length of this string = ${strLength}`);
+   ```
+   **Output -**
+   ```
+   Length of this string = 5
+   ```
+
+2. ### Implement a function to reverse a given string.
+   
+   ```js
+   function revString(str) {
+    return str.split("").reverse().join("");
+   }
+
+   let reverseStr = revString("Hello");
+
+   console.log(`Reverse string = ${reverseStr}`);
+   ```
+   **Output -**
+   ```
+   Reverse string = olleH
+   ```
+
+3. ### Write a function to check is a given string is a palindrome or not.
+   
+   ```js
+   let givenStr = "civic";
+
+   function isPalindrome(str) {
+    const reversed = str.split("").reverse().join("");
+    return str === reversed;
+   }
+
+   if (isPalindrome(givenStr)) {
+    console.log(`Palindrome String`);
+   } else {
+    console.log(`Not a Palindrome String`);
+   }
+   ```
+   **Output -**
+   ```
+   Palindrome String
+   ```
+
+4. 
