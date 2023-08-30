@@ -59,6 +59,7 @@ if (isPalindrome(givenStr)) {
 */
 
 // COUNT REPEATED CHARACTERS
+/*
 function countOccurrences(str, char) {
   let count = 0;
   for (let c of str) {
@@ -72,3 +73,44 @@ function countOccurrences(str, char) {
 let repeatNumber = countOccurrences("raghav", "a");
 
 console.log(`Given character repeated ${repeatNumber} times.`);
+*/
+
+// CAPITALIZE FIRST CHARACTER
+// RegEx approach
+/*
+function capitalizeWords(str) {
+  return str.replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+let message = "my name is raghav";
+
+let capStr = capitalizeWords(message);
+
+console.log(`${capStr}`);
+*/
+
+//Alternate approach
+function capitalizeWords(str) {
+  let capitalized = "";
+  let capitalizeNext = true;
+
+  for (let i = 0; i < str.length; i++) {
+    if (capitalizeNext && str[i] !== " ") {
+      capitalized += str[i].toUpperCase();
+      capitalizeNext = false;
+    } else {
+      capitalized += str[i].toLowerCase();
+    }
+
+    if (str[i] === " ") {
+      capitalizeNext = true;
+    }
+  }
+  return capitalized;
+}
+
+let message = "my name is raghav";
+
+let capStr = capitalizeWords(message);
+
+console.log(`${capStr}`);

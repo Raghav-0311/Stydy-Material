@@ -416,3 +416,48 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
    Given character repeated 2 times.
    ```
    ---
+
+5. ### Implement a function that capitalizes the first letter of each world in a sentence.
+   ```js
+   // RegEx approach
+   function capitalizeWords(str) {
+    return str.replace(/\b\w/g, (char) => char.toUpperCase());
+   }
+   let message = "my name is raghav";
+   
+   let capStr = capitalizeWords(message);
+   
+   console.log(`${capStr}`);
+   ```
+   **Alternate Approach -**
+   ```js
+   function capitalizeWords(str) {
+    let capitalized = "";
+    let capitalizeNext = true;
+
+    for (let i = 0; i < str.length; i++) {
+        if (capitalizeNext && str[i] !== " ") {
+            capitalized += str[i].toUpperCase();
+            capitalizeNext = false;
+        } else {
+            capitalized += str[i].toLowerCase();
+        }
+
+        if (str[i] === " ") {
+            capitalizeNext = true;
+        }
+    }
+    return capitalized;
+   }
+
+   let message = "my name is raghav";
+   
+   let capStr = capitalizeWords(message);
+   
+   console.log(`${capStr}`);
+   ```
+   **Output -**
+   ```
+   My Name Is Raghav
+   ```
+   ---
