@@ -43,6 +43,7 @@ console.log(`Reverse string = ${reverseStr}`);
 */
 
 // PALINDROME STRING
+/*
 let givenStr = "civil";
 
 function isPalindrome(str) {
@@ -55,3 +56,19 @@ if (isPalindrome(givenStr)) {
 } else {
   console.log(`Not a Palindrome String`);
 }
+*/
+
+// COUNT REPEATED CHARACTERS
+function countOccurrences(str, char) {
+  let count = 0;
+  for (let c of str) {
+    if (c === char) {
+      count++;
+    }
+  }
+  return count;
+}
+
+let repeatNumber = countOccurrences("raghav", "a");
+
+console.log(`Given character repeated ${repeatNumber} times.`);

@@ -354,6 +354,7 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
    ```
    Length of this string = 5
    ```
+   ---
 
 2. ### Implement a function to reverse a given string.
    
@@ -370,8 +371,9 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
    ```
    Reverse string = olleH
    ```
+   ---
 
-3. ### Write a function to check is a given string is a palindrome or not.
+3. ### Write a function to check if a given string is a palindrome or not.
    
    ```js
    let givenStr = "civic";
@@ -391,5 +393,26 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
    ```
    Palindrome String
    ```
+   ---
 
-4. 
+4. ### Create a function to count the number of occurrences of a specific chatacter in a string.
+   ```js
+   function countOccurrences(str, char) {
+    let count = 0;
+    for(let c of str) {
+        if(c === char) {
+            count++;
+        }
+    }
+    return count;
+   }
+
+   let repeatNumber = countOccurrences("raghav", "a");
+   
+   console.log(`Given character repeated ${repeatNumber} times.`);
+   ```
+   **Output -**
+   ```
+   Given character repeated 2 times.
+   ```
+   ---
