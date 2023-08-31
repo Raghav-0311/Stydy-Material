@@ -461,3 +461,88 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
    My Name Is Raghav
    ```
    ---
+
+6. ### Write a function to remove all whitespace characters from a string.
+   ```js
+   // RegEx approach
+   function removeWhitespace(str) {
+    return str.replace(/\s/g, "");
+   }
+
+   let message = "my name is raghav";
+
+   let resStr = removeWhitespace(message);
+
+   console.log(`${resStr}`);
+   ```
+   **Alternate Approach -**
+   ```js
+   function removeWhitespace(str) {
+    let noWhitespace = "";
+    for (let i = 0; i < str.length; i++) {
+      if (
+        str[i] !== " " &&
+        str[i] !== "\t" &&
+        str[i] !== "\n" &&
+        str[i] !== "\r"
+        ) {
+        noWhitespace += str[i];
+      }
+    }
+    return noWhitespace;
+   }
+   
+   let message = "my name is raghav";
+   
+   let resStr = removeWhitespace(message);
+   
+   console.log(`${resStr}`);
+   ```
+   **Output -**
+   ```
+   mynameisraghav
+   ```
+   ---
+
+7. ### Implement a function to find the index of the first occurence of a substring in a given string.
+   ```js
+   function indexOfSubstring(str, sub) {
+    return str.indexOf(sub);
+   }
+
+   let message = "my name is raghav";
+   let name = "raghav";
+
+   let index = indexOfSubstring(message, name);
+
+   console.log(`Index of \"${name}\" is ${index} in \"${message}\"`);
+   ```
+   **Alternate Approach -**
+   ```js
+   function indexOfSubstring(str, sub) {
+    for (let i = 0; i <= str.length - sub.length; i++) {
+      let j;
+      for (j = 0; j < sub.length; j++) {
+        if (str[i + j] !== sub[j]) {
+          break;
+        }
+      }
+      if (j === sub.length) {
+        return i;
+      }
+    }
+    return -1;
+   }
+   
+   let message = "my name is raghav";
+   let name = "raghav";
+   
+   let index = indexOfSubstring(message, name);
+   
+   console.log(`Index of \"${name}\" is ${index} in \"${message}\"`);
+   ```
+   **Output -**
+   ```
+   Index of "raghav" is 11 in "my name is raghav"
+   ```
+   ---
