@@ -546,3 +546,41 @@ In JavaScript, Strings are sequences of characters, such as text. They are one o
    Index of "raghav" is 11 in "my name is raghav"
    ```
    ---
+
+8. ### Create a function to remove all occurrences of a specific character from a string.
+   ```js
+   function removeCharOccurences(str, char) {
+    return str.split(char).join("");
+   }
+
+   let word = "Raghav";
+   let character = 'a';
+
+   let newStr = removeCharOccurences(word, character);
+
+   console.log(`After removing all ${character}'s from ${word} it becomes ${newStr}`);
+   ```
+   **Alternate Approach -**
+   ```js
+   function removeCharOccurences(str, char) {
+    let newStr = "";
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] !== char) {
+        newStr += str[i];
+      }
+    }
+    return newStr;
+   }
+
+   let word = "Raghav";
+   let character = 'a';
+
+   let newStr = removeCharOccurences(word, character);
+
+   console.log(`After removing all ${character}'s from ${word} it becomes ${newStr}`);
+   ```
+   **Output -**
+   ```
+   After removing all a's from Raghav it becomes Rghv
+   ```
+   ---

@@ -168,6 +168,7 @@ let index = indexOfSubstring(message, name);
 console.log(`Index of \"${name}\" is ${index} in \"${message}\"`);
 */
 // Alternate Approach
+/*
 function indexOfSubstring(str, sub) {
   for (let i = 0; i <= str.length - sub.length; i++) {
     let j;
@@ -189,3 +190,37 @@ let name = "raghav";
 let index = indexOfSubstring(message, name);
 
 console.log(`Index of \"${name}\" is ${index} in \"${message}\"`);
+*/
+/*
+function removeCharOccurences(str, char) {
+  return str.split(char).join("");
+}
+
+let word = "Raghav";
+let character = "a";
+
+let newStr = removeCharOccurences(word, character);
+
+console.log(
+  `After removing all ${character}'s from ${word} it becomes ${newStr}`
+);
+*/
+
+function removeCharOccurences(str, char) {
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== char) {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+}
+
+let word = "Raghav";
+let character = "a";
+
+let newStr = removeCharOccurences(word, character);
+
+console.log(
+  `After removing all ${character}'s from ${word} it becomes ${newStr}`
+);
