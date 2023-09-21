@@ -201,3 +201,66 @@ Arrays in JavaScript are versatile and fundamental data structures that allow yo
     ```
 
     > Choose the method that best suits your specific use case. If you need to find a single element, ``indexOf()``, ``includes()``, ``find()``, or ``findIndex()`` are typically more suitable. If you need to find multiple elements, ``filter()`` is a good choice. If you need more advanced searching or want to find all occurrences, you may need to write a custom loop or use additional methods like ``reduce()``.
+
+<br />
+
+# Array Methods and Properties
+- ## map() method -
+  - The **map()** method in JavaScript is a built-in-array method used to create a new array by applying a provided function to each element in the original array.
+  - It doesn't modify the original array but instead generates a new array with the results of calling the provided function on each element.
+  - The new array will have the same length as the original array.
+  - **Basic syntax of the map() method** -
+  ```js
+  const newArray = originalArray.map(callback(element, index, array), thisArg);
+  ```
+  - **callback** - The function to execute on each element of the array.
+    - **element** - The current element being processed.
+    - **index** ( ``optional`` ) - The index of the current element being processed.
+    - **array** ( ``optional`` ) - The array that **map()** was called upon.
+  - **thisArg** ( ``optional`` ) - Value to use as **this** when executing the callback.
+  - **Example 1 : Doubling Array Elements -**
+    ```js
+    const numbers = [1, 2, 3, 4, 5];
+
+    const doubledNumbers = numbers.map(function(number) {
+      return number * 2;
+    });
+
+    console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+    ```
+    - In this example, the **map()** method applies the provided callback function to each element in the **numbers** array, doubling each element and creating a new array ( **doubleNumbers** ) with the results.
+  - **Example 2 : Converting Strings to Uppercase -**
+    ```js
+    const fruits = ['apple', 'banana', 'cherry'];
+
+    const uppercasedFruits = fruits.map(function(fruit) {
+      return fruit.toUpperCase();
+    });
+
+    console.log(uppercasedFruits); //['APPLE', 'BANANA', 'CHERRY']
+    ```
+    - Here, the **map()** method transforms each string in the **fruits** array to uppercase and stores the results in a new array.
+  - **Example 3 : Squaring Each Number (Using Arrow Function) -**
+    ```js
+    const numbers = [1, 2, 3, 4, 5];
+
+    const squaredNumbers = numbers.map(number => number ** 2);
+
+    console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+    ```
+    - With ES6 arrow functions, the code can become more concise.
+    - Arrow functions make the code cleaner and easier to read, especially for simple transformations.
+  - **Example 4 : Mapping with an External Function -**
+    ```js
+    function addTwo(number) {
+      return number + 2;
+    }
+
+    const numbers = [1, 2, 3, 4, 5];
+
+    const result = numbers.map(addTwo);
+
+    console.log(result); // [3, 4, 5, 6, 7]
+    ```
+    - You can also use a named function as the callback.
+    - In this case, the **addTwo** function is defined separately, and **map()** applies it to each element in the array.
