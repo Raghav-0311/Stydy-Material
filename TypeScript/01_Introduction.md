@@ -4,6 +4,8 @@ TypeScript is a superset of JavaScript that adds static typing to the language. 
 
 ![JavaScript VS TypeScript](images/JS%20vs%20TS.png)
 
+**$JavaScript + Type Safty = TypeScript$**
+
 # Key Features of TypeScript
 
 - ### Static Typing: ``Type Annotations``
@@ -123,6 +125,8 @@ TypeScript is a superset of JavaScript that adds static typing to the language. 
 
 # Setting up a TypeScript development environment
 
+> TypeScript is just another development tool, your project still runs on JavaScript.
+
 - ### Install Node.js:
     TypeScript relies on Node.js, so you need to have Node.js installed. You can download it from https://nodejs.org/.
 
@@ -131,6 +135,22 @@ TypeScript is a superset of JavaScript that adds static typing to the language. 
 
     ```
     npm install -g typescript
+    ```
+
+    > If you are on mac 💻 just place ``sudo`` before the command and hit enter and it will ask for your passsword.
+
+    Note that all your projects will be running on JavaScript not on TypeScript. That means TypeScript is nothing but a dev dependency for your project. So at that time you will use it as dev dependency as:
+
+    ```
+    npm install typescript --save-dev
+    ```
+    Also for component level approach we use ``.tsx`` extension and a ``tsconfig.json`` file.
+
+- ### Check TypeScript Version:
+    To ensure TypeScript is properly installed on your system, just check its version.
+
+    ```
+    tsc -v
     ```
 
 - ### Create a TypeScript File:
@@ -164,3 +184,9 @@ TypeScript is a superset of JavaScript that adds static typing to the language. 
     node app.js
     ```
     > NOTE: You should see the output: '**Hello, TypeScript!**'
+---
+<br/>
+
+# Practice TypeScript without installing it on your system
+
+**TypeScript Playground** - https://www.typescriptlang.org/play
