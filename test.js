@@ -206,6 +206,7 @@ console.log(
 );
 */
 
+/*
 function removeCharOccurences(str, char) {
   let newStr = "";
   for (let i = 0; i < str.length; i++) {
@@ -224,3 +225,4 @@ let newStr = removeCharOccurences(word, character);
 console.log(
   `After removing all ${character}'s from ${word} it becomes ${newStr}`
 );
+*/
