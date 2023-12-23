@@ -173,3 +173,45 @@ So, fasten your seatbelt as we delve into the world of Node.js, where the magic 
     > Expected web output - visit - ``http://localhost:5000`` - **Hi, your API server is live...**
 
 - **CONGRATULATIONS!** Your API Server is running now ✅.
+
+## Setup Express Router 📌
+- Create a new folder "**routes**" in your projects root directory.
+- Create a new file "**products.js**" in your ``routes`` folder.
+- Import ``express`` from express package in order to use it. ⬇
+    ```js
+    import express from "express";
+    ```
+- Create a router instance, in order to use express router. ⬇
+    ```js
+    const router = express.Router();
+    ```
+- Define routes for your Rest API. ⬇
+    ```js
+    router.route("/").get(getAllProducts);
+    ```
+    > NOTE: ``getAllProducts`` is a function to get all products from our database. we will define this function in our controller.
+- Now we need to export our router so that we can use it in ``app.js``. ⬇
+    ```js
+    export default router;
+    ```
+- Final router code will look like. ⬇
+    ```js
+    import express from "express";
+
+    const router = express.Router();
+
+    router.route("/").get(getAllProducts);
+
+    export default router;
+    ```
+- Now, in order to use our router in ``app.js`` goto app.js and import router. ⬇
+    ```js
+    import product_routes from "./routes/products.js";
+    ```
+    > NOTE: Don't get confused by the name instead of ``product_routes`` you can chose any relevant name for your router.
+- Ok, let's use a middleware function and define our endpoint. ⬇
+    ```js
+    app.use("/api/products", product_routes);
+    ```
+- **CONGRATULATIONS!** our router is all set. Now we need to work on our controller ⚙️.
+
